@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { ConfigModule } from '@nestjs/config';
+
+/*Global Configuration is used to use the env file without dotenv in entire application*/
 const GlobalConfig = ConfigModule.forRoot({ isGlobal: true });
 @Module({
   imports: [PrismaModule, UsersModule, GlobalConfig],
