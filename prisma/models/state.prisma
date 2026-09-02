@@ -1,0 +1,14 @@
+model State {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  countryId Int
+  createdAt DateTime @default(now())
+  createdBy Int
+  updatedBy Int
+  updatedAt DateTime?
+  deletedAt DateTime? 
+  deletedBy Int?
+
+
+  @@map("states")
+}
